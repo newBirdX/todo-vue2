@@ -8,7 +8,7 @@
        <input type="checkbox" class="toggle-all" id="toggle-all">
        <label for="toggle-all"></label>
        <ul class="todo-list">
-         <Item v-for="item in todoDats" :key="item.id" :todo="item"/>
+         <Item v-for="item in todoDatas" :key="item.id" :todo="item"/>
        </ul>
      </section>
      <Footer/>
@@ -24,7 +24,7 @@ import Footer from './components/footer.vue'
     components:{Item,Footer},
     data(){
       return {
-        todoDats:[] ,//存放所有todo
+        todoDatas:[] ,//存放所有todo
         newTodo:"" //新建todo
       }
     },
@@ -35,7 +35,7 @@ import Footer from './components/footer.vue'
         todo.id=new Date().getTime();
         todo.text=this.newTodo;
         todo.hasCompleted=false;
-        this.todoDats.push(todo);
+        this.todoDatas.push(todo);
         this.newTodo="";
       }
     }
