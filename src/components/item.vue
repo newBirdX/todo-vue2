@@ -2,7 +2,7 @@
     <li>
         <div class="view">
             <input type="checkbox" class="toggle">
-            <label>content</label>
+            <label>{{todo.text}}</label>
             <button class="destroy"></button>    
         </div>
         <input type="text" class="edit">
@@ -11,7 +11,8 @@
 
 <script>
     export default {
-        name:"itemComponent"
+        name:"itemComponent",
+        props:['todo']
     }
 </script>
 
